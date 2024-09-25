@@ -39,15 +39,15 @@ const Delete = () =>{
     <div className='calculator'>
          <div className='display'>
            <Display value={input}/>
-           <CurrentValue value={input[input.length-1]}/>
+           
          </div>
       {buttons.map((btn) =>(
         <button key={btn} onClick={()=> handleButtonClick(btn)}>
             {btn}
         </button>
       ))}
-      <button onClick={Clear} style={{"width":"130px"}}>AC</button>
-      <button onClick={Delete} style={{"width":"130px"}}>DEL</button>
+      <button onClick={Clear} style={{"width":"130px","backgroundColor":"darkred"}}>AC</button>
+      <button onClick={Delete} style={{"width":"130px","backgroundColor":"darkblue"}}>DEL</button>
     </div>
   )
 }
