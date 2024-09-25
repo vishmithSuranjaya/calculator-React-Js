@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Display from './Display';
-import CurrentValue from './CurrentValue';
 
 const Cal = () => {
    
