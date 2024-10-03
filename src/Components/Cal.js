@@ -4,6 +4,7 @@ import Display from './Display';
 const Cal = () => {
    
   const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
 
     const buttons = ['7', '8', '9', '/',
     '4', '5', '6', '*',
@@ -20,7 +21,7 @@ const handleButtonClick = (value) => {
 
 const calculateResult = () => {
     try {
-        setInput(eval(input).toString());
+        setResult(eval(input).toString());
     } catch (error) {
         setInput('Error');
     }
@@ -28,6 +29,7 @@ const calculateResult = () => {
 
 const Clear = () =>{
     setInput('');
+    setResult('');
 };
 
 const Delete = () =>{
@@ -37,7 +39,7 @@ const Delete = () =>{
   return (
     <div className='calculator'>
          <div className='display'>
-           <Display value={input}/>
+           <Display input={input} result={result}/>
            
          </div>
       {buttons.map((btn) =>(
