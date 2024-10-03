@@ -49,6 +49,7 @@ const Delete = () =>{
       ))}
       <button onClick={Clear} style={{"width":"130px","backgroundColor":"darkred"}}>AC</button>
       <button onClick={Delete} style={{"width":"130px","backgroundColor":"darkblue"}}>DEL</button>
+      <p>All Rights Reserved</p>
     </div>
   )
 }
